@@ -16875,8 +16875,8 @@ window.onload=function()
 							Game.Load(function(){
 								Game.Init();
 								if (firstLaunch) Game.showLangSelection(true);
-								Game.LoadMod('https://cookiemonsterteam.github.io/CookieMonster/dist/CookieMonster.js');
-								Game.LoadMod("https://icehawk78.github.io/FrozenCookies/frozen_cookies.js");
+								Game.LoadMod('mod/cm.js');
+								Game.LoadMod("mod/fc.js");
 							});
 							//try {Game.Load(Game.Init);}
 							//catch(err) {console.log('ERROR : '+err.message);}
