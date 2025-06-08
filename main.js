@@ -16875,7 +16875,7 @@ window.onload=function()
 							Game.Load(function(){
 								Game.Init();
 								if (firstLaunch) Game.showLangSelection(true);
-								Game.LoadMod('mod/cm.js');
+								//Game.LoadMod('mod/cm.js');
 								Game.LoadMod("mod/fc.js");
 							});
 							//try {Game.Load(Game.Init);}
