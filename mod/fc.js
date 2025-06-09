@@ -1,3 +1,4 @@
+
 // Global Variables
 var lastCompatibleVersion = 2.031;
 if (Game.version > lastCompatibleVersion) {
@@ -28,25 +29,25 @@ var FrozenCookies = {
 
 // Load external libraries
 var script_list = [
-  "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js",
-  "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css",
-  "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js",
-  "https://cdnjs.cloudflare.com/ajax/libs/jcanvas/20.1.1/min/jcanvas.min.js",
-  "https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/jquery.jqplot.min.js",
-  "https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/jquery.jqplot.min.css",
-  "https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.canvasTextRenderer.min.js",
-  "https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.canvasAxisLabelRenderer.min.js",
-  "https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.canvasAxisTickRenderer.min.js",
-  "https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.trendline.min.js",
-  "https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.highlighter.min.js",
-  "https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.logAxisRenderer.min.js",
-  "https://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.9/plugins/jqplot.cursor.min.js",
-  FrozenCookies.baseUrl + "/fc_preferences.js",
-  FrozenCookies.baseUrl + "/cc_upgrade_prerequisites.js",
-  FrozenCookies.baseUrl + "/fc_main.js",
-  FrozenCookies.baseUrl + "/fc_button.js",
-  FrozenCookies.baseUrl + "/fc_spellpredict.js",
-  FrozenCookies.baseUrl + "/fc_infobox.js",
+  "fc-assets/jquery-ui.min.js",
+  "fc-assets/jquery-ui.css",
+  "fc-assets/underscore-min.js",
+  "fc-assets/jcanvas.min.js",
+  "fc-assets/jquery.jqplot.min.js",
+  "fc-assets/jquery.jqplot.min.css",
+  "fc-assets/jqplot.canvasTextRenderer.min.js",
+  "fc-assets/jqplot.canvasAxisLabelRenderer.min.js",
+  "fc-assets/jqplot.canvasAxisTickRenderer.min.js",
+  "fc-assets/jqplot.trendline.min.js",
+  "fc-assets/jqplot.highlighter.min.js",
+  "fc-assets/jqplot.logAxisRenderer.min.js",
+  "fc-assets/jqplot.cursor.min.js",
+  "fc-assets/fc_preferences.js",
+  "fc-assets/cc_upgrade_prerequisites.js",
+  "fc-assets/fc_main.js",
+  "fc-assets/fc_button.js",
+  "fc-assets/fc_spellpredict.js",
+  "fc-assets/fc_infobox.js"
 ];
 
 FrozenCookies.loadInterval = setInterval(function () {
@@ -55,7 +56,7 @@ FrozenCookies.loadInterval = setInterval(function () {
     FrozenCookies.loadInterval = 0;
     fcInit();
   }
-}, 1000);
+}, 100);
 
 function loadScript(id) {
   if (id >= script_list.length) {
@@ -85,7 +86,7 @@ function loadScript(id) {
 function fcInit() {
   var jquery = document.createElement("script");
   jquery.setAttribute("type", "text/javascript");
-  jquery.setAttribute("src", "https://code.jquery.com/jquery-3.6.0.min.js");
+  jquery.setAttribute("src", "fc-assets/jquery-3.6.0.min.js");
   jquery.setAttribute(
     "integrity",
     "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
