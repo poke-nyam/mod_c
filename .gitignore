@@ -1,0 +1,5 @@
+# gitignore
+node_modules
+.package.json
+.package_lock.json
+.index.js

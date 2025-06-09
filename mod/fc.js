@@ -1,3 +1,13 @@
+// debug
+//const originalLog = console.log;
+//console.log = function(...args) {
+//  originalLog.apply(console, args);
+//  fetch('/log', {
+//    method: 'POST',
+//    headers: {'Content-Type': 'application/json'},
+//    body: JSON.stringify({log: args})
+//  });
+//};
 
 // Global Variables
 var lastCompatibleVersion = 2.031;
@@ -66,6 +76,7 @@ function loadScript(id) {
     if (/\.js$/.exec(url)) {
       $.getScript(url, function () {
         loadScript(id + 1);
+        console.log("Loaded Script" + url);
       });
     } else if (/\.css$/.exec(url)) {
       $("<link>")
@@ -75,7 +86,8 @@ function loadScript(id) {
           href: url,
         })
         .appendTo($("head"));
-      loadScript(id + 1);
+        console.log("Loaded Style" + url);
+        loadScript(id + 1);
     } else {
       console.log("Error loading script: " + url);
       loadScript(id + 1);
